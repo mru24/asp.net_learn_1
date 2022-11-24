@@ -25,6 +25,17 @@ namespace MVCWebApp_1.Controllers
               return View(await _context.Device.ToListAsync());
         }
 
+        // GET: Devices/ShowSearchForm
+        public async Task<IActionResult> ShowSearchForm()
+        {
+            return View();
+        }
+
+        // POST: Devices/ShowSearchResults
+        public string ShowSearchResults(String SearchPhrase)
+        {
+            return "entered " + SearchPhrase;
+        }
         // GET: Devices/Details/5
         public async Task<IActionResult> Details(int? id)
         {
